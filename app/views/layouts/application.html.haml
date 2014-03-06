@@ -1,0 +1,40 @@
+!!!
+%html
+	%head
+		%title Qiriqoo
+		= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+		= javascript_include_tag "application", "data-turbolinks-track" => true
+		= csrf_meta_tags
+	%body
+		#top-menu.row
+			.ui.fixed.menu
+				.ui.grid.page
+					.item
+					.item.title
+						Souleymane Diallo
+					.ui.right.menu
+						%a.item#home{:href => '#'}
+							Home
+						%a.item#compet{:href => "#"}
+							Conpétences
+						%a.item#exp{:href => "#"}
+							Expériences/Formation
+						%a.item#proj{:href => "#"}
+							Projets
+		.row
+			#homesearch.home-full
+				.home-back
+					#home-cont
+						Je suis un junior développeur web passionné de Ruby on Rails
+
+				.home-scroll-down
+					= link_to "#" do 
+						%i.icon.down
+
+		.ui.row
+			= yield
+		.row
+			.footer1
+				.ui.grid.page
+					.column
+						© 2014 Souleymane Diallo.
