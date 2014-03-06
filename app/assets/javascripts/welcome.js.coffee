@@ -6,7 +6,7 @@
 jQuery ->
 
   resizeback = ->
-    h = $(window).height() - $(".home-full").position().top + $("#top-menu").position().top
+    h = $(window).height()
     $(".home-back,.home-full,.home-doted").height h  if h > 500
     mt = ((h - $("#home-cont").height()) / 2) * 1.5
     $("#home-cont").css top: mt + "px"  if mt > 50
