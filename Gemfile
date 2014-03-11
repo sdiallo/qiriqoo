@@ -13,7 +13,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
-gem 'bxslider-rails'
+gem "blueimp-gallery-rails", "~> 2.7.0"
 gem 'masonry-rails'
 
 # Use Uglifier as compressor for JavaScript assets

@@ -2,15 +2,15 @@
 %html
 	%head
 		%title Qiriqoo
-		= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-		= javascript_include_tag "application", "data-turbolinks-track" => true
+		= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false
 		= csrf_meta_tags
+
 	%body
 		#top-menu.row
 			.ui.fixed.menu
 				.ui.grid.page
 					.item
-					.item.title
+					.item.myname
 						Souleymane Diallo
 					.right.menu
 						%a.item.active#home{:href => '#'}
@@ -31,10 +31,31 @@
 					= link_to "#" do 
 						%i.icon.down
 
-		.ui.row
+		.row
 			= yield
+
+		.row#project
+			.ui.grid.page
+				.ui.segement
+					%h1.ui.header.attached.top.center.aligned.purple
+						PROJETS
+					#blueimp-gallery-carousel.blueimp-gallery.blueimp-gallery-carousel.slider-cont
+						.slides
+						%h3.title
+						%a.prev ‹
+						%a.next › 
+						%a.play-pause
+						%ol.indicator
+
+					#links{style: "display:none;"}
+						= link_to "#", "assets/projmanager.jpg", :title => "Gestionnaire de Projets"
+						= link_to "#", "assets/idbb.jpg", :title => "site de vente entre particuliers "
+						=link_to "#", "assets/breakdance.jpg", :title => "Gestion d'événnements breakdance"
+				
+
 		.row
 			.footer1
 				.ui.grid.page
 					.column
 						© 2014 Souleymane Diallo.
+		= javascript_include_tag "application", "data-turbolinks-track" => false

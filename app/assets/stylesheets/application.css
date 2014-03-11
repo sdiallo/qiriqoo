@@ -11,6 +11,6 @@
  *= require_self
  *= require semantic-ui
  *= require 'masonry/basic'
- *= require bxslider
+ *= require blueimp-gallery
  *= require_tree
  */

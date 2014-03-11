@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require semantic-ui
 //= require masonry/jquery.masonry
-//= require bxslider
 //= require_tree
+//= require blueimp-gallery
 //= require turbolinks

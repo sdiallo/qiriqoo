@@ -3,7 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
  
+
 jQuery ->
+	blueimp.Gallery document.getElementById("links").getElementsByTagName("a"),
+		container: "#blueimp-gallery-carousel"
+		carousel: true
 
   resizeback = ->
     h = $(window).height()
@@ -17,11 +21,8 @@ jQuery ->
 
   $(document).ready ->
     resizeback()
-  $(document).ready ->
-    $("#projectslier").bxSlider(
-      mode: "fade", 
-      captions: true
-    )
+
+
 
   $container = $("#home-technos").masonry()
   $container.imagesLoaded ->
