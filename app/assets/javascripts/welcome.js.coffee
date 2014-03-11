@@ -17,10 +17,11 @@ jQuery ->
 
   $(document).ready ->
     resizeback()
+  $(document).ready ->
     $("#projectslier").bxSlider(
+      mode: "fade", 
       captions: true
     )
-    return
 
   $container = $("#home-technos").masonry()
   $container.imagesLoaded ->
@@ -28,16 +29,20 @@ jQuery ->
 
 
   $(document).on "click", ".home-scroll-down a", ->
-    h = $("#profile").position().top
+    h = $("#technos-scroll").position().top
     $("body,html").animate
       scrollTop: h,
       3000, "easeInOutQuint"
+    $(".item").removeClass("active")
+    $("#compet").addClass("active")
     false
   
   $(document).on "click", "#compet", ->
     $("body, html").animate
       scrollTop: $("#technos-scroll").position().top,
       2000,  "easeInOutQuint"
+    $(".item").removeClass("active")
+    $("#compet").addClass("active")
     false
 
 
@@ -45,17 +50,22 @@ jQuery ->
     $("body, html").animate
       scrollTop: $("#profile").position().top,
       2000,  "easeInOutQuint"
-    $("#technos_scroll").css position: "fixed"
+    $(".item").removeClass("active")
+    $("#exp").addClass("active")
     false
 
   $(document).on "click", "#proj", ->
     $("body, html").animate
       scrollTop: $("#project").position().top,
       2000,  "easeInOutQuint"
+    $(".item").removeClass("active")
+    $("#proj").addClass("active")
     false
 
   $(document).on "click", "#home", ->
     $("body, html").animate
       scrollTop: $("#top-menu").position().top,
       2000,  "easeInOutQuint"
+    $(".item").removeClass("active")
+    $("#home").addClass("active")
     false

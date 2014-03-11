@@ -87,9 +87,15 @@
 					%br
 				%p Mise en place du système d'emailing sur touscuistot.fr 
 				.ui.label
-					Environnement: Windows, Apache2, MySQL, Php5
-				.ui.label
-					Framework : Drupal7
+					Environnement:
+				%span
+					Windows, Apache2, MySQL, Php5
+					%br
+				%br.fram
+					.ui.label
+						Framework :
+					%span
+						Drupal7
 				%br
 				%br.formation
 					%h4.ui.header.ribbon.label
@@ -146,13 +152,14 @@
 			.ui.segement
 				%h1.ui.header.attached.top.center.aligned.purple
 					PROJETS
-				%ul#projectslier
-					%li
-						%a{:href => "https://github.com/sdiallo/breakevents"}
-							= image_tag "breakdance.png", :title => "gestion d'événement breakdance"
-					%li
-						%a{:href => "", :title => "spdoto2"}
-							= image_tag "projmanager.png", :title => "gestionnaire de projets"
-					%li
-						%a{:href => "", :title => "Photo 3"}
-							= image_tag "idbb.png", :title => "site de vente entre particuliers"
+				#slider-cont
+					%ul#projectslier
+						%li
+							%a{:href => "https://github.com/sdiallo/breakevents"}
+								= image_tag "breakdance.png", :title => "gestion d'événement breakdance"
+						%li
+							%a{:href => "#", :title => "spdoto2"}
+								= image_tag "projmanager.png"
+						%li
+							%a{:href => "https://github.com/sdiallo/IdeesBebe", :title => "Photo 3"}
+								= image_tag "idbb.png", title: "site de vente entre particuliers"
